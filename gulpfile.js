@@ -1,4 +1,4 @@
-// npm install gulp gulp-plumber gulp-rename gulp-autoprefixer gulp-concat gulp-uglify gulp-minify-css gulp-sass browser-sync --save-dev
+// npm install gulp gulp-plumber gulp-rename gulp-autoprefixer gulp-concat gulp-uglify gulp-cssnano gulp-sass browser-sync --save-dev
 
 var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
@@ -14,7 +14,7 @@ gulp.task('browser-sync', function() {
   browserSync({
     server: {
        baseDir: "./"
-   },
+    },
     notify: false,
     open: false
   });
