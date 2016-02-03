@@ -1,0 +1,17 @@
+#scnry-hightail {
+    a {
+        color: $red;
+        text-decoration: none;
+
+        &.white {
+            color: $white;
+        }
+    }
+        a.subsidiary {
+            color: $grey;
+        }
+
+    body {
+      -webkit-tap-highlight-color: rba(0, 0, 0, .35);
+    }
+}

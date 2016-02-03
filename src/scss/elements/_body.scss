@@ -1,0 +1,10 @@
+body {
+    @extend %primary--regular;
+    background: blue;
+    color: $slate;
+    font-size: .625em;
+    height: 100%;
+    line-height: 1.5;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}

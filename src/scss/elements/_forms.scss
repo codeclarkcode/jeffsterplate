@@ -1,0 +1,287 @@
+#scnry-hightail {
+    // Marketo overrides
+    .mktoForm button[disabled=disabled], button:disabled {
+        background-color: $green!important;
+        border-color: $green!important;
+        opacity: 1!important;
+    }
+
+    #contact-sales.lightbox {
+        max-width: 1000px;
+        @media only screen and (min-width: 1081px) { margin-top: 60px; }
+        overflow: hidden;
+    }
+    .contact-sales-info-container {
+        margin-bottom: 5em;
+    }
+        .contact-sales-text {
+            font-size: 15px;
+            @media only screen and (min-width: 501px) { margin-bottom: 3em; }
+        }
+        .contact-sales-heading.h2 {
+            margin: 0!important;
+            font-size: 3.2em;
+        }
+        .contact-sales-phone {
+            color: $black;
+            display: block;
+            font-size: 13px;
+            margin-bottom: .5em;
+        }
+        .contact-sales-phone.light {
+            color: $white;
+        }
+        .sales-phone-location {
+            @extend %primary--bold;
+            margin-right: 5px;
+        }
+    .contact-sales-form-container {
+        background-color: $white;
+        border-radius: 5px;
+        padding: 40px;
+        @media only screen and (min-width: 801px) { padding: 60px; }
+        position: relative;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+        .mktoForm {
+            font-family: "VerbRegular"!important;
+            font-size: 1.8em!important;
+            font-style: normal!important;
+            font-weight: 400!important;
+            width: 100%!important;
+        }
+            .required {
+                bottom: 70px;
+                color: $red;
+                line-height: 4;
+                margin: 0;
+                font-size: 11px;
+                position: absolute;
+                left: 60px;
+            }
+            .mktoOffset {
+                display: none!important;
+            }
+            .mktoForm .mktoFormCol,
+            .mktoForm .mktoFieldWrap {
+                float: left!important;
+                width: 100%!important;
+            }
+            .mktoForm .mktoFormCol {
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6) {
+                    @media only screen and (min-width: 701px) {
+                        float: left!important;
+                        width: 48%!important;
+                    }
+                }
+                &:nth-child(1),
+                &:nth-child(3),
+                &:nth-child(5) {
+                    @media only screen and (min-width: 701px) { margin-right: 2%; }
+                    clear: left!important;
+                }
+                &:nth-child(2),
+                &:nth-child(4),
+                &:nth-child(6) {
+                    @media only screen and (min-width: 701px) { margin-left: 2%; }
+                }
+            }
+                .mktoAsterix {
+                    display: none!important;
+                }
+                .mktoForm .mktoRequiredField label.mktoLabel {
+                    @extend %primary--bold;
+                    font-weight: normal;
+                }
+                .mktoLabel {
+                    display: block!important;
+                    float: none!important;
+                    font-size: 11px!important;
+                    letter-spacing: .25em!important;
+                    line-height: 1.1!important;
+                    margin-bottom: 1em!important;
+                    text-transform: uppercase;
+                    width: auto!important;
+                }
+                .mktoField {
+                    border: 1px solid #CCD2D2;
+                    border-radius: 4px;
+                    font-size: .9em;
+                    margin-bottom: 20px!important;
+                    padding: .8em 1em !important;
+                    width: 100%!important;
+                }
+                .mktoField {
+                    &:focus {
+                        border-color: #2B3A3A;
+                        outline: none;
+                    }
+                }
+
+                .mktoForm select.mktoField {
+                    font-size: .8em;
+                }
+                .mktoForm textarea[rows="3"] {
+                    height: 6em!important;
+                }
+
+                // Checkbox
+                .mktoForm .mktoLogicalField.mktoCheckboxList {
+                    background: #efefef;
+                    border-radius: 4px;
+                    font-size: .9em;
+                    margin-bottom: 30px;
+                    padding: .9em 1em .9em 1em !important;
+                    width: 100%!important;
+                }
+
+                    .mktoForm .mktoLogicalField.mktoCheckboxList input[type=checkbox].mktoField  {
+                        float: left;
+                        margin-bottom: 0;
+                        width: auto !important;
+                    }
+
+                    .mktoForm .mktoLogicalField.mktoCheckboxList label {
+                        font-size: 0.9em;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                    }
+
+                // Error
+                .mktoForm .mktoError {
+                    right: 0!important;
+                    bottom: -5px!important;
+                    @media only screen and (max-width: 500px) {
+                        float: right!important;
+                        position: relative!important;
+                        white-space: nowrap;
+                        width: 100%!important;
+                    }
+                }
+                .mktoForm .mktoError .mktoErrorArrowWrap {
+                    display: none!important;
+                }
+                .mktoForm .mktoError .mktoErrorMsg {
+                    background-image: none!important;
+                    background-color: transparent!important;
+                    border: none!important;
+                    box-shadow: none!important;
+                    color: $error!important;
+                    font-size: 10px!important;
+                    margin-top: -20px!important;
+                    text-shadow: none!important;
+                    max-width: none!important;
+                    text-align: right!important;
+                }
+                    .mktoForm .mktoError .mktoErrorMsg .mktoErrorDetail {
+                        display: inline!important;
+                        text-align: right!important;
+                    }
+
+                // submit button
+                .mktoButtonRow {
+                    text-align: right!important;
+                    width: 100%!important;
+                }
+                    .mktoButtonWrap {
+                        margin: 0 auto!important;
+                    }
+                        .mktoForm button.mktoButton {
+                            -webkit-appearance: none;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            display: inline-block;
+                            background: $orange;
+                            color: $white;
+                            border: 1px solid $orange;
+                            border-radius: 3px;
+                            @extend %primary--medium;
+                            font-size: 16px;
+                            line-height: 1;
+                            padding: 1.25em 2.25em 1em;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            @include transition(background .15s ease);
+                            &:hover,
+                            &:focus,
+                            &:active {
+                              background: darken($orange, 5);
+                              outline: none;
+                              opacity: 1;
+                            }
+                        }
+        //Confirm Form
+        #confirmform {
+          background: #fff;
+          left: 0;
+          padding: 4em 9.5em;
+          @media only screen and (min-width: 801px) { padding: 9.5em; }
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          width: 100%;
+          z-index: 5;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+          .confirm-form-check-icon-wrap {
+              border: 1px solid $grey--medium;
+              border-radius: 50%;
+              display: block;
+              height: 75px;
+              margin: 0 auto;
+              text-align: center;
+              width: 75px;
+          }
+            .confirm-form-check-icon {
+                fill: $green;
+                height: 24px;
+                position: relative;
+                top: 50%;
+                width: 28px;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+          h2 {
+              @extend %primary--bold;
+              color: $green;
+              font-size: 1.8em;
+              line-height: 1.5;
+              margin-bottom: 1em;
+              margin-top: 1.5em;
+          }
+          p {
+            @extend %primary--regular;
+            color: $grey;
+            font-size: 1.5em;
+          }
+        }
+
+
+
+
+
+        ::-webkit-input-placeholder {
+           color: #fff;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: #fff;
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: #fff;
+        }
+
+        :-ms-input-placeholder {
+           color: #fff;
+        }
+}

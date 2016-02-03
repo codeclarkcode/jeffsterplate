@@ -1,0 +1,64 @@
+@import url("//hello.myfonts.net/count/2f6112");
+@import url("//hello.myfonts.net/count/2f693a");
+@import url("//hello.myfonts.net/count/2f640d");
+
+// primary
+@font-face {font-family: 'VerbBlack';src: url('../fonts/verb/2F640D_0_0.eot');src: url('../fonts/verb/2F640D_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/verb/2F640D_0_0.woff2') format('woff2'),url('../fonts/verb/2F640D_0_0.woff') format('woff'),url('../fonts/verb/2F640D_0_0.ttf') format('truetype');}
+@font-face {font-family: 'VerbRegular-Bold';src: url('../fonts/verb/2F640D_1_0.eot');src: url('../fonts/verb/2F640D_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/verb/2F640D_1_0.woff2') format('woff2'),url('../fonts/verb/2F640D_1_0.woff') format('woff'),url('../fonts/verb/2F640D_1_0.ttf') format('truetype');}
+@font-face {font-family: 'VerbLight';src: url('../fonts/verb/2F640D_2_0.eot');src: url('../fonts/verb/2F640D_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/verb/2F640D_2_0.woff2') format('woff2'),url('../fonts/verb/2F640D_2_0.woff') format('woff'),url('../fonts/verb/2F640D_2_0.ttf') format('truetype');}
+@font-face {font-family: 'VerbMedium';src: url('../fonts/verb/2F640D_3_0.eot');src: url('../fonts/verb/2F640D_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/verb/2F640D_3_0.woff2') format('woff2'),url('../fonts/verb/2F640D_3_0.woff') format('woff'),url('../fonts/verb/2F640D_3_0.ttf') format('truetype');} 
+@font-face {font-family: 'VerbRegular';src: url('../fonts/verb/2F640D_4_0.eot');src: url('../fonts/verb/2F640D_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/verb/2F640D_4_0.woff2') format('woff2'),url('../fonts/verb/2F640D_4_0.woff') format('woff'),url('../fonts/verb/2F640D_4_0.ttf') format('truetype');}
+
+%primary--light {
+  font-family: "VerbLight";
+  font-style: normal;
+  font-weight: normal;
+}
+
+%primary--regular {
+  font-family: "VerbRegular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+%primary--medium {
+  font-family: "VerbMedium";
+  font-style: normal;
+  font-weight: normal;
+}
+
+%primary--bold {
+  font-family: "VerbRegular-Bold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+%primary--black {
+  font-family: "VerbBlack";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
+// secondary
+@font-face {font-family: 'Adelle-Light';src: url('../fonts/2F6112_0_0.eot');src: url('../fonts/2F6112_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2F6112_0_0.woff2') format('woff2'),url('../fonts/2F6112_0_0.woff') format('woff'),url('../fonts/2F6112_0_0.ttf') format('truetype');}
+@font-face {font-family: 'Adelle-Regular';src: url('../fonts//2F693A_0_0.eot');src: url('../fonts//2F693A_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts//2F693A_0_0.woff2') format('woff2'),url('../fonts//2F693A_0_0.woff') format('woff'),url('../fonts//2F693A_0_0.ttf') format('truetype');}
+
+%secondary--light {
+  font-family: "Adelle-Light";
+  font-style: normal;
+  font-weight: normal;
+}
+%secondary--regular {
+  font-family: "Adelle-Regular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+b, strong {
+  font-family: "VerbMedium";
+  font-style: normal;
+  font-weight: normal;
+}

@@ -1,0 +1,14 @@
+.hidden {
+	display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.collapse-pin {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+}

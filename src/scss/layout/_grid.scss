@@ -1,0 +1,16 @@
+#scnry-hightail {
+    .grid {
+        list-style: none;
+        margin-top: 0;
+        padding: 0 30px;
+        @media only screen and (min-width: 701px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+        .grid li {
+            margin-bottom: 30px;
+            padding: 0 15px;
+            width: 100%;
+        }
+}

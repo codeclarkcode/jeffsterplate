@@ -1,0 +1,36 @@
+#scnry-hightail {
+    .icon {
+        g {
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+    .borderless-icon-container {
+        @include transition(background-color .25s ease-in-out, margin-left .25s ease-in-out);
+        border: 1px solid $red;
+        border-radius: 20px;
+        display: inline-block;
+        height: 20px;
+        margin-left: 20px;
+        text-align: center;
+        width: 20px;
+        vertical-align: bottom;
+    }
+    .btn:hover .borderless-icon-container {
+        background-color: $red;
+    }
+        .borderless-icon {
+            @include transition(fill .25s ease-in-out);
+            fill: $red;
+            height: 9px;
+            margin-left: 2px;
+            margin-top: 5px;
+            width: 7px;
+        }
+            .btn:hover .borderless-icon {
+                fill: $white;
+            }
+}
