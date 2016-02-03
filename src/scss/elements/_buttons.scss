@@ -1,94 +1,94 @@
-#scnry-hightail {
-  button {
-    &:focus,
-    &:active {
-      outline: none;
-      box-shadow: none;
-      border: none;
-    }
-  }
+/**
 
-  .btn {
-    -webkit-appearance: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: inline-block;
-    background: $orange;
-    color: $white;
-    cursor: pointer;
-    border: 1px solid $orange;
-    border-radius: 3px;
-    @extend %primary--medium;
-    font-size: 1.6em;
-    line-height: 1;
-    padding: 1.25em 1.65em 1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    @include transition(background .15s ease);
-    &:hover,
-    &:focus,
-    &:active {
-      background: darken($orange, 5);
-      outline: none;
-      opacity: 1;
-    }
+-----------------------------------------------------
+  elements/_buttons.scss
+-----------------------------------------------------
 
-    &.btn--small {
-      font-size: 1.4em;
-      padding: .75em 2em .65em;
-    }
-    &.borderless {
-      border: none;
-      line-height: 1.1;
-      padding-left: 0;
-      padding-right: 0;
-    }
-    &.full-width {
-      display: block;
-    }
-  }
+**/
 
-  /* @btn--secondary */
-
-  .btn--secondary {
-    background: $blue;
-    border: 1px solid $blue;
-    color: $white;
-    &:hover,
-    &:focus,
-    &:active {
-      background: darken($blue, 5);
-    }
-  }
-
-  /* @btn--clear */
-
-  .btn--clear {
-    background: none;
-    border: 2px solid $orange;
-    color: $orange;
-    &:hover,
-    &:focus,
-    &:active {
-      background: none;
-      color: darken($orange, 5);
-      border-color: darken($orange, 5);
-    }
-    &.alt {
-      border-color: $white;
-      color: $white;
-    }
-  }
-
-
-  .btn--medium {
-    font-size: 1.4em;
-    padding: 1em 1.429em;
-  }
-
-  .btn.btn--less-important {
-    padding-left: 1.25em;
-    padding-right: 1.25em;
-    text-transform: none;
-  }
-}
+// button {
+//     &:focus,
+//     &:active {
+//         outline: none;
+//         box-shadow: none;
+//         border: none;
+//     }
+// }
+// .btn {
+//     -webkit-appearance: none;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//     display: inline-block;
+//     background: $orange;
+//     color: $white;
+//     cursor: pointer;
+//     border: 1px solid $orange;
+//     border-radius: 3px;
+//     @extend %primary--medium;
+//     font-size: 1.6em;
+//     line-height: 1;
+//     padding: 1.25em 1.65em 1em;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     transition: background .15s ease;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         background: darken($orange, 5);
+//         outline: none;
+//         opacity: 1;
+//     }
+// 
+//     &.btn--small {
+//         font-size: 1.4em;
+//         padding: .75em 2em .65em;
+//     }
+//     &.borderless {
+//         border: none;
+//         line-height: 1.1;
+//         padding-left: 0;
+//         padding-right: 0;
+//     }
+//     &.full-width {
+//         display: block;
+//     }
+// }
+// 
+// /* @btn--secondary */
+// .btn--secondary {
+//     background: $blue;
+//     border: 1px solid $blue;
+//     color: $white;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         background: darken($blue, 5);
+//     }
+// }
+// 
+// /* @btn--clear */
+// .btn--clear {
+//     background: none;
+//     border: 2px solid $orange;
+//     color: $orange;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         background: none;
+//         color: darken($orange, 5);
+//         border-color: darken($orange, 5);
+//     }
+//     &.alt {
+//         border-color: $white;
+//         color: $white;
+//     }
+// }
+// .btn--medium {
+//     font-size: 1.4em;
+//     padding: 1em 1.429em;
+// }
+// .btn.btn--less-important {
+//     padding-left: 1.25em;
+//     padding-right: 1.25em;
+//     text-transform: none;
+// }

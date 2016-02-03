@@ -1,9 +1,7 @@
 @import
-    "base/_breakpoint-mixin",
+    "base/_breakpoints",
     "base/_colors",
-    "base/_font-face-importer",
     "base/_fonts",
-    "base/_group",
     "base/_mixins",
 	"base/_helpers",
     "base/_normalize",
@@ -17,6 +15,6 @@
     "elements/_buttons",
     "elements/_icons",
     "elements/_forms",
-    "elements/_blockquote",
+    "elements/_blockquotes",
     "layout/_general",
     "layout/_grid"

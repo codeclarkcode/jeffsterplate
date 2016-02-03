@@ -1,14 +1,20 @@
-#scnry-hightail {
-    ul,ol {
-        
-    }
-    ul.no-padding, ol.no-padding {
-        padding-left: 0;
-    }
-    .inline-list li {
-        display: inline-block;
-    }
-    .block-list {
-        display: block;
-    }
+/**
+
+-----------------------------------------------------
+  elements/_lists.scss
+-----------------------------------------------------
+
+**/
+
+ul,ol {
+
+}
+ul.no-padding, ol.no-padding {
+    padding-left: 0;
+}
+.inline-list li {
+    display: inline-block;
+}
+.block-list {
+    display: block;
 }
