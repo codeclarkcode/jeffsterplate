@@ -1,4 +1,4 @@
-// npm install gulp gulp-plumber gulp-rename gulp-autoprefixer gulp-concat gulp-uglify gulp-cssnano gulp-sass browser-sync --save-dev
+// npm install gulp gulp-plumber gulp-rename gulp-autoprefixer gulp-concat gulp-uglify gulp-cssnano gulp-sass browser-sync gulp-sourcemaps --save-dev
 
 var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 
 gulp.task('browser-sync', function() {
@@ -32,11 +33,13 @@ gulp.task('styles', function(){
         console.log(error.message);
         this.emit('end');
     }}))
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer('last 3 versions'))
     .pipe(gulp.dest('assets/css/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('assets/css/'))
     .pipe(browserSync.reload({stream:true}))
 });
