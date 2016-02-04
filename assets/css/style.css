@@ -8,6 +8,20 @@
   Options include bp-at-least for min-width, bp-until
   for max-width, and bp-between for min and max widths.
 
+Usage: styles at medium breakpoint
+.some-element {
+  @include bp-at-least($breakpoint__md){
+    your-styles: go-here;
+  }
+}
+
+Usage: styles at custom breakpoint
+.another-element {
+  @include bp-until(83.45em){
+    your-styles: go-here;
+  }
+}
+
 -----------------------------------------------------  **/
 /**
 
@@ -426,7 +440,7 @@ html {
 body {
   font-size: .625em;
   height: 100%;
-  line-height: 1.5;
+  line-height: 1.5em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
 
@@ -439,21 +453,11 @@ body {
 **/
 p {
   font-size: 1.5em;
-  line-height: 1.6;
-  margin-bottom: 1em;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
   margin-top: .9em; }
   p.white {
     color: #FFFFFF; }
-  p.lede {
-    font-size: 2em; }
-    @media only screen and (min-width: 801px) {
-      p.lede {
-        font-size: 3em; } }
-    p.lede.sans {
-      font-size: 2em; }
-      @media only screen and (min-width: 801px) {
-        p.lede.sans {
-          font-size: 2.8em; } }
   p.large {
     font-size: 1.8em; }
   p.small {
@@ -461,17 +465,6 @@ p {
   p.no-margin {
     margin-bottom: 0;
     margin-top: 0; }
-
-b,
-strong {
-  font-weight: bold; }
-
-i,
-em {
-  font-style: italic; }
-
-.muted {
-  color: rgba(128, 130, 133, 0.75); }
 
 /**
 
@@ -487,21 +480,15 @@ h1.white, h2.white, h3.white, h4.white, h5.white, h6.white {
   color: #FFFFFF; }
 
 h1, .h1 {
-  font-size: 1.1em;
-  letter-spacing: .25em;
-  line-height: 1.1;
-  margin-bottom: 1em;
-  text-transform: uppercase; }
+  font-size: 2.8em;
+  line-height: 1.15em;
+  margin-bottom: 1em; }
 
 h2, .h2 {
-  font-size: 3em;
-  line-height: 1.2;
-  letter-spacing: 0;
+  font-size: 2em;
+  line-height: 1.6em;
   margin-bottom: 1em;
   text-transform: none; }
-  @media only screen and (min-width: 701px) {
-    h2, .h2 {
-      font-size: 4.2em; } }
   h2.no-top-margin, .h2.no-top-margin {
     margin-top: 0; }
   h2.capped-width, .h2.capped-width {
@@ -531,13 +518,12 @@ h6, .h6 {
 
 **/
 a {
-  color: red;
+  color: orange;
   text-decoration: none; }
   a.white {
     color: #FFFFFF; }
-
-a.subsidiary {
-  color: #808285; }
+  a.subsidiary {
+    color: #808285; }
 
 body {
   -webkit-tap-highlight-color: rba(0, 0, 0, 0.35); }
@@ -549,6 +535,12 @@ body {
 -----------------------------------------------------
 
 **/
+ul, ol {
+  font-size: 1.5em;
+  padding-left: 1.1em; }
+  ul *, ol * {
+    font-size: inherit; }
+
 ul.no-padding, ol.no-padding {
   padding-left: 0; }
 
@@ -575,6 +567,42 @@ img {
 -----------------------------------------------------
 
 **/
+button:focus, button:active {
+  outline: none;
+  box-shadow: none;
+  border: none; }
+
+.btn {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  background: orange;
+  border: 1px solid orange;
+  border-radius: 3px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1.6em;
+  line-height: 1;
+  padding: 1.25em 1.65em 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .15s ease; }
+  .btn:hover, .btn:focus, .btn:active {
+    background: #e69500;
+    outline: none;
+    opacity: 1; }
+  .btn.btn--small {
+    font-size: 1.4em;
+    padding: .75em 2em .65em; }
+  .btn.borderless {
+    border: none;
+    line-height: 1.1;
+    padding-left: 0;
+    padding-right: 0; }
+  .btn.full-width {
+    display: block; }
+
 /**
 
 -----------------------------------------------------
@@ -582,13 +610,6 @@ img {
 -----------------------------------------------------
 
 **/
-.icon g {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%); }
-
 /**
 
 -----------------------------------------------------
@@ -625,24 +646,6 @@ img {
 
 .layout-container.full-height {
   min-height: 100vh; }
-
-.layout-container.narrow {
-  max-width: 850px; }
-  @media only screen and (min-width: 801px) {
-    .layout-container.narrow {
-      padding-left: 50px; } }
-  @media only screen and (min-width: 801px) {
-    .layout-container.narrow {
-      padding-right: 50px; } }
-
-.layout-container.wide {
-  max-width: 1500px; }
-  @media only screen and (min-width: 801px) {
-    .layout-container.wide {
-      padding-left: 50px; } }
-  @media only screen and (min-width: 801px) {
-    .layout-container.wide {
-      padding-right: 50px; } }
 
 .site-content {
   background-color: #FFFFFF; }

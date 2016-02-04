@@ -6,8 +6,12 @@
 
 **/
 
-ul,ol {
-
+ul, ol {
+    font-size: 1.5em;
+    padding-left: 1.1em;
+    & * {
+        font-size: inherit;
+    }
 }
 ul.no-padding, ol.no-padding {
     padding-left: 0;
