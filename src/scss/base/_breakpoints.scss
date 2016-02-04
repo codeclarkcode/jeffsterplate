@@ -4,22 +4,29 @@
   base/_breakpoints.scss
 -----------------------------------------------------
 
-  This mixin makes using inline media queries easy.
-  Options include bp-at-least for min-width, bp-until
-  for max-width, and bp-between for min and max widths.
+This mixin makes using inline media queries easy.
+Options include bp-at-least for min-width, bp-until
+for max-width, and bp-between for min and max widths.
 
 Usage: styles at medium breakpoint
 .some-element {
-  @include bp-at-least($breakpoint__md){
-    your-styles: go-here;
-  }
+    @include bp-at-least($breakpoint__md){
+        your-styles: go-here;
+    }
 }
 
 Usage: styles at custom breakpoint
 .another-element {
-  @include bp-until(83.45em){
-    your-styles: go-here;
-  }
+    @include bp-until(83.45em){
+        your-styles: go-here;
+    }
+}
+
+Usage: styles between medium large breakpoint
+.another-element {
+    @include bp-between($breakpoint__md, $breakpoint__lg){
+        your-styles: go-here;
+    }
 }
 
 -----------------------------------------------------  **/
@@ -38,21 +45,27 @@ $breakpoints: (
 //
 // Extra Small: Small mobile
 $breakpoint__xs: map-get($breakpoints, xs);
+$bp__xs: map-get($breakpoints, xs);
 
 // Small: Larger mobile
 $breakpoint__sm: map-get($breakpoints, sm);
+$bp__sm: map-get($breakpoints, sm);
 
 // Medium: Tablet
 $breakpoint__md: map-get($breakpoints, md);
+$bp__md: map-get($breakpoints, md);
 
 // Large: Landscape tablet, beginning desk size
 $breakpoint__lg: map-get($breakpoints, lg);
+$bp__lg: map-get($breakpoints, lg);
 
 // Extra Large: Large Desk size
 $breakpoint__xl: map-get($breakpoints, xl);
+$bp__xl: map-get($breakpoints, xl);
 
 // Double Extra Large: Huge Desk size
 $breakpoint__xxl: map-get($breakpoints, xxl);
+$bp__xxl: map-get($breakpoints, xxl);
 
 // Breakpoint At Least
 @mixin bp-at-least($device-width) {
