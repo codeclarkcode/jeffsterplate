@@ -8,9 +8,19 @@
 
 ul, ol {
     font-size: 1.5em;
-    padding-left: 1.1em;
+    margin-bottom: 1.6em;
+    margin-top: 0em;
+    li {
+        &:not(:last-child) {
+            margin-bottom: .5em;
+        }
+        & li:first-child {
+            margin-top: .5em;
+        }
+    }
     & * {
         font-size: inherit;
+        margin-bottom: 0;
     }
 }
 ul.no-padding, ol.no-padding {

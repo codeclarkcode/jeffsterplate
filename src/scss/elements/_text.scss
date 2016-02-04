@@ -8,23 +8,11 @@
 
 p {
     font-size: 1.5em;
-    line-height: 1.6;
-    margin-bottom: 1em;
-    margin-top: .9em;
-
+    line-height: 1.6em;
+    margin-bottom: 1.6em;
+    margin-top: 0em;
     &.white {
         color: $white;
-    }
-    &.lede {
-        @extend %secondary--regular;
-        font-size: 2em;
-        @media only screen and (min-width: 801px) { font-size: 3em; }
-
-        &.sans {
-            @extend %primary--regular;
-            font-size: 2em;
-            @media only screen and (min-width: 801px) { font-size: 2.8em; }
-        }
     }
     &.large {
         font-size: 1.8em;
@@ -32,30 +20,8 @@ p {
     &.small {
         font-size: 1.3em;
     }
-    &.bold {
-        @extend %primary--bold;
-    }
     &.no-margin {
         margin-bottom: 0;
         margin-top: 0;
     }
-}
-
-b,
-strong {
-    // NOTE: use bold font-face if available instead of 'font-weight: bold'
-    font-weight: bold;
-}
-
-i,
-em {
-    // NOTE: use italic font-face if available instead of 'font-style: italic'
-    font-style: italic;
-}
-
-.primary {
-    @extend %primary--medium;
-}
-.muted {
-    color: rgba($grey, .75);
 }
