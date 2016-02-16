@@ -37,7 +37,6 @@ gulp.task('styles', function(){
     .pipe(sass())
     .pipe(autoprefixer('last 3 versions'))
     .pipe(gulp.dest('assets/css/'))
-    .pipe(rename({suffix: '.min'}))
     .pipe(cssnano())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('assets/css/'))
@@ -51,11 +50,9 @@ gulp.task('scripts', function(){
         console.log(error.message);
         this.emit('end');
     }}))
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('assets/js/scripts/'))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('assets/js/'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js/scripts/'))
+    .pipe(gulp.dest('assets/js/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
